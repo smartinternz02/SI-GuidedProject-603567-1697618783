@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smart home temperature</title>
+    <!-- <link rel="stylesheet" type="text/css" href="static/css/index.css" /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <nav>
+      <label>Smart Home Temperature</label>
+      <ul>
+        <li>
+          <a href="/">About</a>
+          <a href="predict">Predict</a>
+          <a href="/contact">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h3>Welcome to Smart Home Temperature</h3>
+      <button type="button" onclick="redirectToNewPage()">
+        Click Here to predict
+      </button>
+    </div>
+
+    <h4>About</h4>
+    <p>
+      Smart WI-FI thermostats have moved well beyond the function they were
+      originally designed for;<br />namely,controlling heating and cooling
+      comfort in buildings.
+    </p>
+
+    <ul>
+      <li>
+        * They are now also learning form occupant behaviours and permit
+        occupants to control their comfort remotely.
+      </li>
+      <br />
+      <li>
+        * This project seeks to go beyound this state of the art by utilizing
+        smart Wi-Fi thermostat data in residences to develop dynamic predictive
+        models for room temperature.
+      </li>
+    </ul>
+
+    <div class="navbar">
+      <h2>Develeoped by @team-592148</h2>
+    </div>
+    <script>
+      function redirectToNewPage() {
+        // Redirect to a new HTML page
+        window.location.href = "predict";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smart home temperature</title>
+    <!-- <link rel="stylesheet" type="text/css" href="static/css/predict.css" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/predict.css') }}">
+  </head>
+  <body>
+    <nav>
+      <label>Smart Home Temperature</label>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+          <a href="/predict">Predict</a>
+          <a href="/contact">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h3>Welcome to Smart Home Temperature</h3>
+    </div>
+
+    <center>
+      <div class="login-box">
+        <h2>INPUTS</h2>
+        <form action="/output" method="POST">
+          <div class="user-box">
+            <label>CO2(dinning room)</label>
+            <input
+              type="number"
+              placeholder="CO2 in dinning room"
+              name="CO2_(dinning-room)"
+              required=""
+              step="0.001"
+            />
+          </div>
+
+          <div class="user-box">
+            <label>CO2 room</label>
+            <input
+              type="number"
+              placeholder="CO2 in room"
+              name="CO2_room"
+              required=""
+              step="0.001"
+            />
+          </div>
+
+          <div class="user-box">
+            <label>Humidity(dinning room)</label>
+            <input
+              type="number"
+              name="Relative_humidity_(dinning-room)"
+              required=""
+              step="0.001"
+            />
+          </div>
+
+          <div class="user-box">
+            <label>Humidity room</label>
+            <input type="number" name="Relative_humidity_room" required="" step="0.001" />
+          </div>
+
+          <div class="user-box">
+            <label>lighting(dinning room)</label>
+            <input type="number" name="Lighting_(dinning-room)" required="" step="0.001" />
+          </div>
+
+          <div class="user-box">
+            <label>lighting room</label>
+            <input type="number" name="Lighting_room" required="" step="0.001" />
+          </div>
+
+          <div class="user-box">
+            <label>Rain</label>
+            <input type="number" name="Meteo_Rain" required="" step="0.001" />
+          </div>
+
+          <div class="user-box">
+            <label>Sun Dusk</label>
+            <input type="number" name="Meteo_Sun_dusk" required="" step="0.001" />
+          </div>
+
+          <div class="user-box">
+            <label>Wind</label>
+            <input type="number" name="Meteo_Wind" required="" step="0.001" />
+          </div>
+
+          <div class="user-box">
+            <label>Sunlight at west</label>
+            <input
+              type="number"
+              name="Meteo_Sun_light_in_west_facade"
+              required=""
+              step="0.001"
+            />
+          </div>
+
+          <div class="user-box">
+            <label>Sunlight at east</label>
+            <input
+              type="number"
+              name="Meteo_Sun_light_in_east_facade"
+              required=""
+              step="0.001"
+            />
+          </div>
+
+          <div class="user-box">
+            <label>Sunlight at south</label>
+            <input
+              type="number"
+              name="Meteo_Sun_light_in_south_facade"
+              required=""
+              step="0.001"
+            />
+          </div>
+
+          <div class="user-box">
+            <label>Sun Irridance</label>
+            <input type="number" name="Meteo_Sun_irradiance" required="" step="0.001" />
+          </div>
+
+          <div class="user-box">
+            <label>Outdoor Humidity</label>
+            <input
+              type="number"
+              name="Outdoor_relative_humidity_Sensor"
+              required=""
+              step="0.001"
+            />
+          </div>
+
+          <a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            round off upto 3 decimals like 3=3.000, 3.1425=3.143, 2.1423=3.142, 0=0.000
+          </a>
+          <a href="/output">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <input type="submit">Submit</input>
+          </a>
+
+          <h4>{{result}}</h4>
+        </form>
+        
+      </div>
+    </center>
+  </body>
+</html>
